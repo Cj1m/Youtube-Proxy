@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+#DOESNT WORK ANYMORE UR BAD SON
 require 'sinatra'
 require 'rest-client'
 require 'open-uri'
