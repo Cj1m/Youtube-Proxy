@@ -16,7 +16,7 @@ class Rack::Handler::WEBrick
     end
 end
 
-url = "http://youtube.com"
+url = "https://youtube.com"
 last_link = "/youtube"
 param = nil
 error = nil
@@ -86,7 +86,7 @@ get '/watch' do
       File.rename("public/#{filename}.mp4", "public/#{newname}.mp4")
     end
 
-
+#some new stuff
     #<video width='1280' height='720' controls>
     # <source src='#{newname}.mp4' type='video/mp4'>
     #Your browser does not support the HTML5 video tag!
@@ -94,9 +94,9 @@ get '/watch' do
 
     "<html>
     <body>
-    <h1>#{filename}</h1>
+    <h5>#{filename}</h5>
     <form action='#{last_link}'>
-    <input type='submit' value='Go back to Youtube'/>
+    <input type='submit' value='Go Back to Youtube'/>
     </form>
     
     <div>
@@ -107,7 +107,7 @@ get '/watch' do
     </object></center>
     </div>
 
-    <h2><u>Description</u><h2>
+    <h3><u>Description</u><h3>
     <small>#{video_stuff.description}</small>
     </body>
     </html>"
